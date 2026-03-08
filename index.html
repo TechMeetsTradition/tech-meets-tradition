@@ -2,220 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <title>TechMeetsTradition | Where Code Meets Culture</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        parchment: '#FCF5E5',
-                        walnut: '#5D4037',
-                        gold: '#EAB003',
-                        ink: '#1A1A1A',
-                    },
-                    fontFamily: {
-                        tradition: ['"Noto Serif"', 'serif'],
-                        tech: ['"Space Mono"', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Home | Tech Meets Tradition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Custom Parchment Grain Overlay */
-        .parchment-texture {
-            background-color: #FCF5E5;
-            position: relative;
-        }
-        .parchment-texture::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.04;
-            pointer-events: none;
-            z-index: 50;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        /* Ensures the Home banner is responsive and prominent */
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: block;
         }
 
-        /* Glassmorphism Effect */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px 0 rgba(93, 64, 55, 0.1);
-            transition: all 0.5s ease;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Centering the home page welcome text */
         }
 
-        /* Wax Seal Button Style */
-        .wax-seal {
-            background: radial-gradient(circle at 30% 30%, #a52a2a, #5D4037);
-            box-shadow: 
-                inset 0 0 10px rgba(0,0,0,0.5),
-                3px 3px 6px rgba(0,0,0,0.3);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid rgba(0,0,0,0.1);
-        }
-        .wax-seal:hover {
-            transform: scale(1.05) rotate(-2deg);
-            box-shadow: 
-                inset 0 0 15px rgba(0,0,0,0.6),
-                5px 5px 12px rgba(0,0,0,0.4);
+        .welcome-text {
+            margin-top: 20px;
+            line-height: 1.8;
         }
 
-        /* Zen Mode Transitions */
-        .zen-hidden {
-            opacity: 0 !important;
-            pointer-events: none;
-            transition: opacity 0.8s ease-in-out;
-        }
-
-        /* Aspect Ratio for Videos */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            background: #000;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: none;
-        }
-        
-        /* Specific Aspect Ratio for Shorts */
-        .shorts-container {
-            position: relative;
-            padding-bottom: 177.77%; /* 9:16 */
-            height: 0;
-            overflow: hidden;
-            background: #000;
-        }
-        .shorts-container iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: none;
+        /* Footer Styling consistent with your other pages */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
-<body class="parchment-texture font-tradition text-ink min-h-screen overflow-x-hidden">
-
+<body>
     <nav>
-    <a href="index.html" class="logo">TMT</a>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-    </ul>
-</nav>
-    
-    <nav class="fixed top-0 w-full z-40 p-6 flex justify-between items-center transition-all duration-700" id="ui-nav">
-        <div class="font-tech text-walnut font-bold text-xl tracking-tighter">
-            &gt; TechMeetsTradition_<span class="animate-pulse text-gold">|</span>
-        </div>
-        <button onclick="toggleZen()" id="zen-btn" class="font-tech text-xs border border-walnut/30 px-4 py-2 rounded hover:bg-walnut hover:text-parchment transition-all uppercase tracking-widest z-50 relative">
-            Zen Mode
-        </button>
+        <a href="index.html" class="logo">TMT</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
     </nav>
 
-    <main class="container mx-auto px-4 pt-24 pb-20 relative z-10" id="content-wrapper">
+    <div class="container">
+        <img src="home-banner.jpg" alt="Tech Meets Tradition - Ancient Wisdom meets Future Tech" class="header-image">
+
+        <h1 class="hero-title">Welcome to Tech Meets Tradition</h1>
         
-        <section class="mb-16" id="shorts-section">
-            <h2 class="text-2xl font-tech text-walnut mb-8 uppercase tracking-widest text-center zen-hidden-element">// YouTube Shorts</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
-                    <h3 class="text-lg font-tech font-bold mb-4 text-center min-h-[3rem]">✨📂🖥️ Unix-like Systems 🖥️📂✨</h3>
-                    <div class="w-full shorts-container rounded-lg overflow-hidden border border-walnut/20 shadow-inner">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLCsM7Yq1wKEprGdUoYETmpRadrOmhAMjU" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
-                    <h3 class="text-lg font-tradition font-bold mb-4 text-center min-h-[3rem]">✨🙏🕉️ Sanatan Dharma 🕉️ 🙏✨</h3>
-                    <div class="w-full shorts-container rounded-lg overflow-hidden border border-walnut/20 shadow-inner">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLCsM7Yq1wKEqEK9e3_RH8oAZPtl3FW5uE" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
-                    <h3 class="text-lg font-tradition font-bold mb-4 text-center min-h-[3rem]">🏜️ 🦎 Flora & Fauna 🦎 🏜️</h3>
-                    <div class="w-full shorts-container rounded-lg overflow-hidden border border-walnut/20 shadow-inner">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLCsM7Yq1wKEqV9-l3cn-IepVYEwx8weeL" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="welcome-text">
+            <p><strong>Bridging the gap between the ancient past and the digital future.</strong></p>
+            <p>Explore a world where sophisticated cybernetics meet the timeless wisdom of ancient India. Here, we use cutting-edge AI tools to narrate, illustrate, and preserve knowledge for everyone, everywhere.</p>
+            
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+            
+            <p>Check out my latest updates on the <a href="blog.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">TMT Blog</a> or learn more about the project on the <a href="about.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">About Page</a>.</p>
+        </div>
+    </div>
 
-        <section class="mb-20 text-center glass-card p-8 md:p-12 rounded-3xl max-w-5xl mx-auto border-2 border-gold/20" id="featured-long">
-            <div class="zen-hidden-element">
-                <h2 class="text-3xl md:text-4xl font-bold text-walnut mb-4">✨🎞️ Long Form Videos! 🎞️✨</h2>
-                <p class="text-walnut/80 italic mb-8 max-w-2xl mx-auto">"Deeper explorations of interesting topics and locations."</p>
-            </div>
-            <div class="video-container rounded-xl overflow-hidden border-4 border-walnut shadow-2xl">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PLCsM7Yq1wKEqm3MjD9kMyBRKukQbRT2md" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section class="text-center py-10 transition-all duration-700" id="cta-area">
-            <a href="https://www.youtube.com/@TechMeetsTradition?sub_confirmation=1" target="_blank" class="inline-block px-10 py-6 rounded-full wax-seal text-parchment font-tech font-bold text-lg tracking-widest uppercase flex flex-col items-center gap-2 group">
-                <span>SUBSCRIBE</span>
-            </a>
-            <p class="mt-8 font-tech text-walnut/40 text-xs uppercase tracking-widest zen-hidden-element"> TechMeetsTradition // Est. 2025</p>
-        </section>
-
-    </main>
-
-    <script>
-        let isZen = false;
-
-        function toggleZen() {
-            isZen = !isZen;
-            const body = document.body;
-            const zenBtn = document.getElementById('zen-btn');
-            const wrapper = document.getElementById('content-wrapper');
-
-            if (isZen) {
-                zenBtn.innerText = "Exit Zen";
-                zenBtn.style.opacity = "0.5";
-                
-                // Hide specific elements
-                document.querySelectorAll('h1, h2, h3, p, #ui-nav div, #cta-area, .zen-hidden-element').forEach(el => {
-                    el.classList.add('zen-hidden');
-                });
-                
-                // Stripped back cards for focus
-                document.querySelectorAll('.glass-card').forEach(card => {
-                    card.style.background = "transparent";
-                    card.style.border = "none";
-                    card.style.boxShadow = "none";
-                    card.style.backdropFilter = "none";
-                });
-
-                wrapper.style.transform = "translateY(40px)";
-            } else {
-                zenBtn.innerText = "Zen Mode";
-                zenBtn.style.opacity = "1";
-
-                document.querySelectorAll('.zen-hidden').forEach(el => {
-                    el.classList.remove('zen-hidden');
-                });
-
-                document.querySelectorAll('.glass-card').forEach(card => {
-                    card.style.background = "";
-                    card.style.border = "";
-                    card.style.boxShadow = "";
-                    card.style.backdropFilter = "";
-                });
-
-                wrapper.style.transform = "translateY(0)";
-            }
-        }
-    </script>
+    <footer>
+        <p>Visuals and prompt creation assistance by Nano Banana 2 & Google Gemini 3. <br>
+        Curated by TechMeetsTradition.</p>
+    </footer>
 </body>
 </html>
