@@ -27,7 +27,54 @@
             line-height: 1.8;
         }
 
-        /* Footer Styling consistent with your other pages */
+        /* Playlist Section Styling */
+        .playlist-container {
+            margin-top: 40px;
+            text-align: left;
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .playlist-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .playlist-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .playlist-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            transition: background 0.3s ease;
+            border-bottom: 1px solid #eee;
+        }
+
+        .playlist-item:last-child {
+            border-bottom: none;
+        }
+
+        .playlist-link {
+            text-decoration: none;
+            color: #444;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .playlist-link:hover {
+            color: #000;
+        }
+
+        /* Footer Styling */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -59,7 +106,33 @@
             
             <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
             
-            <p>Check out my latest updates on the <a href="blog.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">TMT Blog</a> or learn more about the project on the <a href="about.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">About Page</a>.</p>
+            <div class="playlist-container">
+                <h2>✨ Featured Playlists</h2>
+                <div class="playlist-list">
+                    <div class="playlist-item">
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEprGdUoYETmpRadrOmhAMjU" class="playlist-link" target="_blank">
+                            ✨📂🖥️ Unix-like (or *nix) systems 🖥️📂✨
+                        </a>
+                    </div>
+                    <div class="playlist-item">
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqEK9e3_RH8oAZPtl3FW5uE" class="playlist-link" target="_blank">
+                            ✨📂🖥️ Unix-like (or *nix) systems (Part 2) 🖥️📂✨
+                        </a>
+                    </div>
+                    <div class="playlist-item">
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqV9-l3cn-IepVYEwx8weeL" class="playlist-link" target="_blank">
+                            🏜️ 🦎 Flora & Fauna Shorts 🦎 🏜️
+                        </a>
+                    </div>
+                    <div class="playlist-item">
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqm3MjD9kMyBRKukQ" class="playlist-link" target="_blank">
+                            ✨🎞️ Long Form Videos! 🎞️✨
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px;">Check out my latest updates on the <a href="blog.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">TMT Blog</a> or learn more about the project on the <a href="about.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">About Page</a>.</p>
         </div>
     </div>
 
