@@ -7,34 +7,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Navigation Layout */
+        /* --- Unified Navigation Layout --- */
         .navbar-with-banner {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Pushes Logo left, Banner center, Links right */
+            justify-content: space-between; 
             padding: 10px 40px;
             background: #fff;
             border-bottom: 1px solid #eee;
         }
 
-        .logo {
-            flex: 1; /* Gives the logo container space to exist on the left */
+        .logo-container {
+            flex: 1; /* Pushes content to the left */
+            display: flex;
+            align-items: center;
         }
 
         .nav-banner-container {
-            flex: 2; /* Gives more room to the banner in the center */
+            flex: 2; /* Occupies the center space */
             text-align: center;
         }
 
         .nav-banner {
-            width: 50%; /* Half size for high-DPI sharpness */
-            max-width: 400px; /* Prevents it from getting too large */
+            width: 50%; /* Sharpness: Half original size */
+            max-width: 350px; 
             height: auto;
             border-radius: 4px;
         }
 
         .nav-links-container {
-            flex: 1; /* Balances the logo on the right side */
+            flex: 1; /* Pushes content to the right */
             display: flex;
             justify-content: flex-end;
         }
@@ -53,7 +55,7 @@
             font-weight: 600;
         }
 
-        /* Original Content Styling */
+        /* --- Content Styling --- */
         .header-image {
             width: 100%;
             height: auto;
@@ -81,9 +83,11 @@
 </head>
 <body>
     <nav class="navbar-with-banner">
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="TMT Logo" width="80" height="80">
-        </a>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="TMT Logo" width="80" height="80">
+            </a>
+        </div>
 
         <div class="nav-banner-container">
             <img src="home-banner.png" alt="TMT Banner" class="nav-banner">
@@ -93,19 +97,14 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                </ul>
+            </ul>
         </div>
     </nav>
+
     <div class="container">
         <img src="about-banner.jpg" alt="Ancient cyborg at a computer with a temple view" class="header-image">
-
         <h1 class="hero-title">TMT's Philosophy</h1>
-        <p><strong>Tech Meets Tradition</strong> Like the Linux Penguin (Tux), I stand for open access to knowledge. The TechMeetsTradition YouTube channel is 100% non-commercial, and un-monetized. Voice-over narrations were created via Google AI Studio and ttsmaker.com, AI still image generations using Google Flow (via Nano Banana), Whisk (via Imagen4), and Mixboard (via Nano Banana), visual prompt creation and text assistance by Gemini. Join me for fun facts and illustrated adventures created through modern technology. Don't forget to like, share, and <a href="https://www.youtube.com/@TechMeetsTradition?sub_confirmation=1" target="_blank" rel="noopener noreferrer">subscribe to TechMeetsTradition!</a>
-        </p>
-
-        <h2>The Mission</h2>
-        <p>My mission is to deliver knowledge in a beautiful, and fun way that is accessible to everyone. Using AI-generated art and narration, as well as my own photographs and videos, I transform informative facts and concepts into engaging visual journeys.
-        </p>
+        <p><strong>Tech Meets Tradition</strong> Like the Linux Penguin (Tux), I stand for open access to knowledge. The TechMeetsTradition YouTube channel is 100% non-commercial, and un-monetized...</p>
     </div>
 
     <footer>
