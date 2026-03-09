@@ -7,6 +7,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Navigation Layout */
+        .navbar-with-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Pushes Logo left, Banner center, Links right */
+            padding: 10px 40px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            flex: 1; /* Gives the logo container space to exist on the left */
+        }
+
+        .nav-banner-container {
+            flex: 2; /* Gives more room to the banner in the center */
+            text-align: center;
+        }
+
+        .nav-banner {
+            width: 50%; /* Half size for high-DPI sharpness */
+            max-width: 400px; /* Prevents it from getting too large */
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .nav-links-container {
+            flex: 1; /* Balances the logo on the right side */
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-links-container ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links-container ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Original Content Styling */
         .header-image {
             width: 100%;
             height: auto;
@@ -21,7 +68,6 @@
             padding: 20px;
         }
 
-        /* Footer Styling */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -34,20 +80,24 @@
     </style>
 </head>
 <body>
-<nav class="navbar-with-banner">
-    <img src="home-banner.png" alt="TMT Banner" class="nav-banner">
-    
-    <div class="nav-links">
+    <nav class="navbar-with-banner">
         <a href="index.html" class="logo">
             <img src="logo.png" alt="TMT Logo" width="80" height="80">
         </a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </div>
-</nav>
+
+        <div class="nav-banner-container">
+            <img src="home-banner.png" alt="TMT Banner" class="nav-banner">
+        </div>
+        
+        <div class="nav-links-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <img src="about-banner.jpg" alt="Ancient cyborg at a computer with a temple view" class="header-image">
 
