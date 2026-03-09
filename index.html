@@ -7,124 +7,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Ensures the Home banner is responsive and prominent */
-        .header-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            display: block;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center; /* Centering the home page welcome text */
-        }
-
-        .welcome-text {
-            margin-top: 20px;
-            line-height: 1.8;
-        }
-
-        /* Playlist Section Styling */
-        .playlist-container {
-            margin-top: 40px;
-            text-align: center; /* Changed from left to center */
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #eee;
-        }
-
-        .playlist-container h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
-
-        .playlist-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .playlist-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            transition: background 0.3s ease;
-            border-bottom: 1px solid #eee;
-        }
-
-        .playlist-item:last-child {
-            border-bottom: none;
-        }
-
-        .playlist-link {
-            text-decoration: none;
-            color: #444;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center; /* Centers the content within the flex link */
-            gap: 10px;
-        }
-
-        .playlist-link:hover {
-            color: #000;
-        }
-
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-            font-size: 0.85rem;
-            color: #777;
-            border-top: 1px solid #eee;
-        }
-    </style>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <meta charset="UTF-8">
-    <title>About | TechMeetsTradition</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Navigation Layout */
+        /* --- Navigation Layout --- */
         .navbar-with-banner {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Pushes Logo left, Banner center, Links right */
+            justify-content: space-between; 
             padding: 10px 40px;
             background: #fff;
             border-bottom: 1px solid #eee;
         }
 
-        .logo {
-            flex: 1; /* Gives the logo container space to exist on the left */
+        .logo-container {
+            flex: 1; /* Pushes content to the left */
+            display: flex;
+            align-items: center;
         }
 
         .nav-banner-container {
-            flex: 2; /* Gives more room to the banner in the center */
+            flex: 2; /* Occupies the center space */
             text-align: center;
         }
 
         .nav-banner {
-            width: 50%; /* Half size for high-DPI sharpness */
-            max-width: 400px; /* Prevents it from getting too large */
+            width: 50%; /* Sharpness: Half original size */
+            max-width: 350px; 
             height: auto;
             border-radius: 4px;
         }
 
         .nav-links-container {
-            flex: 1; /* Balances the logo on the right side */
+            flex: 1; /* Pushes content to the right */
             display: flex;
             justify-content: flex-end;
         }
@@ -143,7 +55,7 @@
             font-weight: 600;
         }
 
-        /* Original Content Styling */
+        /* --- Page Content Styling --- */
         .header-image {
             width: 100%;
             height: auto;
@@ -156,6 +68,37 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
+        }
+
+        .welcome-text {
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        /* --- Playlist Section --- */
+        .playlist-container {
+            margin-top: 40px;
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .playlist-link {
+            text-decoration: none;
+            color: #444;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .playlist-item:last-child .playlist-link {
+            border-bottom: none;
         }
 
         footer {
@@ -165,15 +108,17 @@
             font-size: 0.85rem;
             color: #777;
             border-top: 1px solid #eee;
-            line-height: 1.6;
         }
     </style>
 </head>
 <body>
+
     <nav class="navbar-with-banner">
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="TMT Logo" width="80" height="80">
-        </a>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="TMT Logo" width="80" height="80">
+            </a>
+        </div>
 
         <div class="nav-banner-container">
             <img src="home-banner.png" alt="TMT Banner" class="nav-banner">
@@ -187,33 +132,15 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <img src="about-banner.jpg" alt="Ancient cyborg at a computer with a temple view" class="header-image">
-
-        <h1 class="hero-title">TMT's Philosophy</h1>
-        <p><strong>Tech Meets Tradition</strong> Like the Linux Penguin (Tux), I stand for open access to knowledge. The TechMeetsTradition YouTube channel is 100% non-commercial, and un-monetized. Voice-over narrations were created via Google AI Studio and ttsmaker.com, AI still image generations using Google Flow (via Nano Banana), Whisk (via Imagen4), and Mixboard (via Nano Banana), visual prompt creation and text assistance by Gemini. Join me for fun facts and illustrated adventures created through modern technology. Don't forget to like, share, and <a href="https://www.youtube.com/@TechMeetsTradition?sub_confirmation=1" target="_blank" rel="noopener noreferrer">subscribe to TechMeetsTradition!</a>
-        </p>
-
-        <h2>The Mission</h2>
-        <p>My mission is to deliver knowledge in a beautiful, and fun way that is accessible to everyone. Using AI-generated art and narration, as well as my own photographs and videos, I transform informative facts and concepts into engaging visual journeys.
-        </p>
-    </div>
-
-    <footer>
-        <p>Visuals and prompt creation assistance by Nano Banana 2 & Google Gemini 3. <br> 
-        Curated by TechMeetsTradition.</p>
-    </footer>
-</body>
-</html>
 
     <div class="container">
-        <img src="home-banner.jpg" alt="TechMeetsTradition - Ancient Wisdom meets Future Tech" class="header-image">
+        <img src="home-banner.jpg" alt="Ancient Wisdom meets Future Tech" class="header-image">
 
         <h1 class="hero-title">Welcome to the TMT Website</h1>
         
         <div class="welcome-text">
             <p><strong>Bridging the gap between the ancient past and the digital future.</strong></p>
-            <p>Explore a world where AI makes learning fun. Here, I use cutting-edge AI tools to narrate, illustrate, and preserve knowledge for everyone, everywhere.</p>
+            <p>Explore a world where AI makes learning fun. I use cutting-edge AI tools to narrate, illustrate, and preserve knowledge for everyone, everywhere.</p>
             
             <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
             
@@ -221,29 +148,24 @@
                 <h2>✨ Featured Playlists ✨</h2>
                 <div class="playlist-list">
                     <div class="playlist-item">
-                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEprGdUoYETmpRadrOmhAMjU" class="playlist-link" target="_blank">
-                            📂🖥️ Unix-like (or *nix) systems 🖥️📂
-                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEprGdUoYETmpRadrOmhAMjU" class="playlist-link" target="_blank">📂🖥️ Unix-like systems 🖥️📂</a>
                     </div>
                     <div class="playlist-item">
-                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqEK9e3_RH8oAZPtl3FW5uE" class="playlist-link" target="_blank">
-                            🙏🕉️ Sanatan Dharma Shorts 🕉️ 🙏
-                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqEK9e3_RH8oAZPtl3FW5uE" class="playlist-link" target="_blank">🙏🕉️ Sanatan Dharma Shorts 🕉️ 🙏</a>
                     </div>
                     <div class="playlist-item">
-                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqV9-l3cn-IepVYEwx8weeL" class="playlist-link" target="_blank">
-                            🏜️ 🦎 Flora & Fauna Shorts 🦎 🏜️
-                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqV9-l3cn-IepVYEwx8weeL" class="playlist-link" target="_blank">🏜️ 🦎 Flora & Fauna Shorts 🦎 🏜️</a>
                     </div>
                     <div class="playlist-item">
-                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqm3MjD9kMyBRKukQbRT2md" class="playlist-link" target="_blank">
-                            ✨🎞️ Long Form Videos! 🎞️✨
-                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLCsM7Yq1wKEqm3MjD9kMyBRKukQbRT2md" class="playlist-link" target="_blank">✨🎞️ Long Form Videos! 🎞️✨</a>
                     </div>
                 </div>
             </div>
 
-            <p style="margin-top: 30px;">Check out my latest updates on the <a href="blog.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">TMT Blog</a> or learn more about the project on the <a href="about.html" style="color: var(--accent-gold); font-weight: bold; text-decoration: none;">About Page</a>.</p>
+            <p style="margin-top: 30px;">
+                Check out my latest updates on the <a href="blog.html" style="font-weight: bold;">TMT Blog</a> 
+                or learn more on the <a href="about.html" style="font-weight: bold;">About Page</a>.
+            </p>
         </div>
     </div>
 
@@ -251,5 +173,6 @@
         <p>Visuals and prompt creation assistance by Nano Banana 2 & Google Gemini 3. <br>
         Curated by TechMeetsTradition.</p>
     </footer>
+
 </body>
 </html>
