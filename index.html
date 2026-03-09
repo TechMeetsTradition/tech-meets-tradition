@@ -1,4 +1,4 @@
-center the banner in the top menu and put the logo on the extreme left: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -18,25 +18,26 @@ center the banner in the top menu and put the logo on the extreme left: <!DOCTYP
         }
 
         .logo-container {
-            flex: 1; /* Pushes content to the left */
+            flex: 1; 
             display: flex;
             align-items: center;
         }
 
         .nav-banner-container {
-            flex: 2; /* Occupies the center space */
+            flex: 2; 
             text-align: center;
         }
 
         .nav-banner {
-            width: 50%; /* Sharpness: Half original size */
+            width: 50%; /* Sharpness strategy: display at half-size */
             max-width: 350px; 
             height: auto;
             border-radius: 4px;
+            display: inline-block;
         }
 
         .nav-links-container {
-            flex: 1; /* Pushes content to the right */
+            flex: 1; 
             display: flex;
             justify-content: flex-end;
         }
@@ -121,7 +122,7 @@ center the banner in the top menu and put the logo on the extreme left: <!DOCTYP
         </div>
 
         <div class="nav-banner-container">
-            <img src="home-banner.png" alt="TMT Banner" class="nav-banner">
+            <img src="home-banner.jpg" alt="TMT Banner" class="nav-banner">
         </div>
         
         <div class="nav-links-container">
